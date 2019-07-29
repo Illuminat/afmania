@@ -145,10 +145,9 @@ app.controller('updateUser', function ($scope, $uibModalInstance, data) {
 
     };
 
-    $scope.deleteUser = function () {
+    $scope.delete = function () {
         axios.delete('api/users/'+data.id)
         .then(function (response) {
-            $scope.getUsers();
         })
         .catch(function (error) {
             if (error.response) {
